@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+
+    <title>Profile Search</title>
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <!-- endinject -->
+  </head>
+
+  <body>
+    <div id="app" class="container">
+      <div class="row">
+        <div class="col-s6 mx-auto pt-5">
+          <h3>GitHub Account Profile Search</h3>
+          <p class="mt-3">Por favor, insira o nome da conta do GitHub de acordo com os nomes abaixo</p>
+          <input type="text" v-model='iSearch'>
+          <table class="mt-5 table table-striped table-dark table-bordered">
+            <tbody>
+              <tr v-for="object in oDFiltered">
+                <td>Login</td>
+                <td>{{ object.login }}</td>
+                <td>ID</td>
+                <td>{{ object.id }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
